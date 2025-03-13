@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+      rel="stylesheet"
+    />
+    <title>Loopstudios landing page</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <style>
+   .hero-list{
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+    
+}
+.hero-list-1{
+  list-style: none;
+    display: flex;
+    margin-left: -20px;
+}
+.hero-list li{
+    margin: 0 20px;
+    position: relative;
+}
+.hero-list-1 li{
+  margin: 20px 20px;
+  position: relative;
+}
+.hero-list li a{
+    font-family: "alata", sans-serif;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.hero-list-1 li a {
+  font-family: "alata", sans-serif;
+    color: hsl(213, 9%, 39%);
+    text-decoration: none;
+}
+.hero-list-1 li a::after{
+  content: ' ';
+  position: absolute;
+  background-color: white;
+  width: 0%;
+  height: 4px;
+  top: 75%;
+  border-radius: 20px;
+  display: block;
+}
+
+.hero-list li::after{
+  content: ' ';
+  position: absolute;
+  background-color: white;
+  width: 0%;
+  height: 4px;
+  top: 75%;
+  border-radius: 20px;
+  display: block;
+ }
+.hero-list li:hover::after{
+  width: 100%;
+  transition: 0.5s;
+}
+.hero-list-1 li :hover::after{
+  width: 100%;
+  transition: 0.5s;
+}
+.checkbox {
+    width: 30px;
+    height: 30px;
+    display: none;
+    cursor: pointer;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    right: 30px;
+    top: 45px;
+}
+#check {
+    display: none;
+}
+
+@media(max-width:858px){
+  .checkbox {
+        display: block;
+        position: fixed;
+        color: white;
+    }
+    .checkbox :active{
+        color: black;
+    }
+    .hero-list-1 li a:hover{
+      color: white;
+    }
+    .hero-list-1 li a::after{
+      display: none;
+    }
+    
+    .hero-list li::after{
+      display: none;
+    }
+    .hero-list li a:hover{
+      color: white;
+    }
+
+    .hero-list {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: 80px   ;
+        left: -100%;
+        background: black;
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        z-index: 999;
+    }
+    .hero-list-1{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-list li {
+        display: block;
+        margin: 20px 0;
+    }
+    .hero-list li a {
+        font-size: 25px;
+        line-height: 120px;
+        color: hsl(213, 9%, 39%);
+    }
+    #check:checked ~ .hero-list {
+        left: 0px;
+    }
+}
+  </style>
+  <body>
+    <header
+      class="bg-[url(/images/desktop/image-hero.jpg)] w-full h-[100vh] bg-cover bg-center p-8 md:block  flex items-center flex-col" >
+    <nav class="flex justify-between w-[100%]">
+      <label class="logo"><img src="/images/logo.svg" alt=""></label>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbox">
+          <img src="/images/icon-hamburger.svg" alt="">
+      </label>
+      <ul class="hero-list">
+          <li><a href="">About</a></li>
+          <li><a href="" >Careers</a></li>
+          <li><a href="" >Events</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">Support</a></li>
+      </ul>
+  </nav>
+      <div
+        class="w-fit text-white mt-20 h-fit  border-2 border-white p-3 text-[60px] mt-30">
+        <h1 class="font-[Josefin sans, sans-serif] font-light text-[min(10vw,70px)]">
+          IMMERSIVE <br>EXPERIENCE THAT <br> DELIVER
+        </h1>
+      </div>
+    </header>
+
+
+
+
+
+    <div class="w-[90%] mx-auto">
+    <div class="w-[100%] md:flex block  justify-between md:mt-20 mt-5 relative ">
+      <div
+        class="bg-[url(/images/desktop/image-interactive.jpg)] md:w-[70%] w-[100%] md:h-110 h-70 md bg-cover bg-center p-8"></div>
+      <div
+        class="absolute  md:w-[50%] w-[80%] h-fit  text-[40px] bg-white md:pl-[50px] md:text-justify text-center md:mt-0 mt-15  md:pt-[30px] lg:w-[30%] lg:top-[60%] md:pr-5 md:left-[50%] md:p-5 md:top-[56%] md:pl-8 ml-8">
+        <h1 class="font-[Josefin sans, sans-serif] font-light leading-8 ">
+          THE LEADER IN INTERACTIVE VR
+        </h1>
+        <p class="text-[12px] font-[Alata] text-gray-500 pt-5 leading-4">
+          Founded in 2011, Loopstudios has been producing world-class virtual 
+          reality projects for some of the best companies around the globe. Our
+          award-winning creations have transformed businesses through digital
+          ecperiences that bind to their brand.
+        </p>
+      </div>
+    </div>
+
+    <div class="relative w-[100%]">
+    <div class="w-[100%]  flex justify-between md:mt-20 mt-60 md:mb-5">
+      <h1 class="font-[Josefin sans, sans-serif] font-light md:text-xl text-[40px] md:mx-0 mx-auto">
+        OUR CREATIONS
+      </h1>
+      <button
+        class="md:w-30 w-40 md:h-5 h-8 bg-white absolute border-black border-2 md:left-[84%] md:top-[0%] md:mt-0 mt-5 top-[100%] left-[35%] -ml-3  font-[Alata] text-xs tracking-[5px] hover:bg-black hover:text-white lg:left-[89%]"
+      >
+        SEE ALL
+      </button>
+    </div>
+
+
+    <div class="w-[100%] md:grid md:grid-cols-4 md:grid-rows-2 md:gap-4">
+        <div
+          class="bg-[url(/images/desktop/image-deep-earth.jpg)] bg-cover  md:h-100 h-40 md:mt-0 mt-5  flex p-5 pl-8 opacity-100 items-end"
+        >
+          <h1
+            class="font-[Josefin sans, sans-serif] font-light text-xl text-white"
+          >
+            DEEP <br />EARTH
+          </h1>
+        </div>
+        <div
+          class="bg-[url(/images/desktop/image-night-arcade.jpg)] bg-cover md:bg-top  md:h-100 h-40 md:mt-0 mt-5 flex p-5 pl-8 opacity-100 items-end"
+        >
+          <h1
+            class="font-[Josefin sans, sans-serif] font-light text-xl text-white"
+          >
+            NIGHT <br />ARCADE
+          </h1>
+        </div>
+        <div
+          class="bg-[url(/images/desktop/image-soccer-team.jpg)] bg-cover md:bg-top  md:h-100 h-40 md:mt-0 mt-5 flex p-5 pl-8 opacity-100 items-end"
+        >
+          <h1
+            class="font-[Josefin sans, sans-serif] font-light text-xl text-white"
+          >
+            SOCCER <br />
+            TEAM VR
+          </h1>
+        </div>
+        <div
+          class="bg-[url(/images/desktop/image-grid.jpg)] bg-cover md:bg-top  md:h-100 h-40 md:mt-0 mt-5 flex p-5 pl-8 opacity-100 items-end"
+        >
+          <h1
+            class="font-[Josefin sans, sans-serif] font-light text-xl text-white"
+          >
+            THE <br />GRID
+          </h1>
+        </div>
+    
+        <div
+          class="bg-[url(/images/desktop/image-from-above.jpg)] bg-cover md:bg-top  md:h-100 h-40 md:mt-0 mt-5 flex p-5 pl-8 opacity-100 items-end"
+        >
+          <h1
+            class="font-[Josefin sans, sans-serif] font-light text-xl text-white"
+          >
+            FROM UP <br />
+            ABOVE VR
+          </h1>
+        </div>
+        <div
+          class="bg-[url(/images/desktop/image-pocket-borealis.jpg)] bg-cover md:bg-top  md:h-100 h-40 md:mt-0 mt-5 flex p-5 pl-8 opacity-100 items-end"
+        >
+          <h1
+            class="font-[Josefin sans, sans-serif] font-light text-xl text-white"
+          >
+            POCKET <br />BOREALIS
+          </h1>
+        </div>
+        <div
+          class="bg-[url(/images/desktop/image-curiosity.jpg)] bg-cover md:bg-top  md:h-100 h-40 md:mt-0 mt-5 flex p-5 pl-8 opacity-100 items-end"
+        >
+          <h1
+            class="font-[Josefin sans, sans-serif] font-light text-xl text-white"
+          >
+            THE <br />CURIOSITY
+          </h1>
+        </div>
+        <div
+          class="bg-[url(/images/desktop/image-fisheye.jpg)] bg-cover md:bg-top  md:h-100 h-40 md:mt-0 mt-5 flex p-5 pl-8 opacity-100 items-end"
+        >
+          <h1
+            class="font-[Josefin sans, sans-serif] font-light text-xl text-white"
+          >
+            MAKE IT <br />
+            FISHEYE
+          </h1>
+        </div>
+    </div> 
+    </div>
+
+    </div>
+
+    <footer
+      class="md:flex md:items-center md:justify-between bg-black h-fit p-15 pl-20 pr-20 mt-20"
+    >
+      <div class="flex md:flex-col flex-col md:items-start items-center">
+        <img src="/images/logo.svg" alt="" width="50%">
+        <ul class="hero-list-1">
+          <li><a href="">About</a></li>
+          <li><a href="" >Careers</a></li>
+          <li><a href="" >Events</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">Support</a></li>
+      </ul>
+      </div>
+
+      <div class="flex flex-col md:items-end items-center md:mt-0 mt-10">
+        <ul class="flex items-center gap-[2vw] text-white mb-5">
+          <li class="relative  md:-m-1 m-3 ">
+            <a
+              href=""
+              class="after:content-[' '] after:absolute after:bg-white after:h-[3px] after:w-[0px] after:rounded-xl after:duration-300 after:right-[10%] after:top-[30px] hover:after:w-[85%]"
+              ><img src="/images/icon-facebook.svg" alt=""
+            /></a>
+          </li>
+          <li class="relative md:-m-1 m-3">
+            <a
+              href=""
+              class="after:content-[' '] after:absolute after:bg-white after:h-[3px] after:w-[0px] after:rounded-xl after:duration-300 after:right-[10%] after:top-[30px] hover:after:w-[85%]"
+              ><img src="/images/icon-twitter.svg" alt=""
+            /></a>
+          </li>
+          <li class="relative md:-m-1 m-3">
+            <a
+              href=""
+              class="after:content-[' '] after:absolute after:bg-white after:h-[3px] after:w-[0px] after:rounded-xl after:duration-300 after:right-[10%] after:top-[30px] hover:after:w-[85%]"
+              ><img src="/images/icon-pinterest.svg" alt=""
+            /></a>
+          </li>
+          <li class="relative md:-m-1 m-3">
+            <a
+              href=""
+              class="after:content-[' '] after:absolute after:bg-white after:h-[3px] after:w-[0px] after:rounded-xl after:duration-300 after:right-[10%] after:top-[30px] hover:after:w-[85%]"
+              ><img src="/images/icon-instagram.svg" alt=""
+            /></a>
+          </li>
+        </ul>
+        <p class="text-gray-400 text-right font-[Alata] text-xs">
+          &copy; 2025 Loopstudios. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
