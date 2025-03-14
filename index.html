@@ -106,7 +106,7 @@
 @media(max-width:858px){
   .checkbox {
         display: block;
-        position: fixed;
+        position: sticky;
         color: white;
         z-index: 999;
     }
@@ -156,6 +156,9 @@
         font-size: 25px;
         line-height: 120px;
         color: hsl(213, 9%, 39%);
+    }
+    #check:checked ~ .checkbox{
+      position: fixed;
     }
     #check:checked ~ .hero-list {
         left: 0px;
